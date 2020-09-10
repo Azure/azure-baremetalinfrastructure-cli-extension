@@ -24,6 +24,9 @@ class Operation(Model):
     :vartype name: str
     :param display: Displayed AzureBareMetal operation information
     :type display: ~microsoft.baremetalinfrastructure.models.Display
+    :param is_data_action: indicates whether an operation is a data action or
+     not.
+    :type is_data_action: bool
     """
 
     _validation = {
@@ -33,9 +36,11 @@ class Operation(Model):
     _attribute_map = {
         'name': {'key': 'name', 'type': 'str'},
         'display': {'key': 'display', 'type': 'Display'},
+        'is_data_action': {'key': 'isDataAction', 'type': 'bool'},
     }
 
-    def __init__(self, *, display=None, **kwargs) -> None:
+    def __init__(self, *, display=None, is_data_action: bool=None, **kwargs) -> None:
         super(Operation, self).__init__(**kwargs)
         self.name = None
         self.display = display
+        self.is_data_action = is_data_action

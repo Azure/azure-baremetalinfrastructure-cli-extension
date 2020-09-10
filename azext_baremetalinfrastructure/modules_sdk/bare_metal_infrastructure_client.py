@@ -14,7 +14,6 @@ from msrest import Serializer, Deserializer
 from msrestazure import AzureConfiguration
 from .version import VERSION
 from .operations.azure_bare_metal_instances_operations import AzureBareMetalInstancesOperations
-from .operations.bare_metal_instances_operations import BareMetalInstancesOperations
 from .operations.operations import Operations
 from . import models
 
@@ -60,8 +59,6 @@ class BareMetalInfrastructureClient(SDKClient):
 
     :ivar azure_bare_metal_instances: AzureBareMetalInstances operations
     :vartype azure_bare_metal_instances: microsoft.baremetalinfrastructure.operations.AzureBareMetalInstancesOperations
-    :ivar bare_metal_instances: BareMetalInstances operations
-    :vartype bare_metal_instances: microsoft.baremetalinfrastructure.operations.BareMetalInstancesOperations
     :ivar operations: Operations operations
     :vartype operations: microsoft.baremetalinfrastructure.operations.Operations
 
@@ -86,8 +83,6 @@ class BareMetalInfrastructureClient(SDKClient):
         self._deserialize = Deserializer(client_models)
 
         self.azure_bare_metal_instances = AzureBareMetalInstancesOperations(
-            self._client, self.config, self._serialize, self._deserialize)
-        self.bare_metal_instances = BareMetalInstancesOperations(
             self._client, self.config, self._serialize, self._deserialize)
         self.operations = Operations(
             self._client, self.config, self._serialize, self._deserialize)

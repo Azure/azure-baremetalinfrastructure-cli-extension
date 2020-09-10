@@ -13,8 +13,7 @@ class AzureBareMetalInstanceCommandsLoader(AzCommandsLoader):
         from azure.cli.core.commands import CliCommandType
         custom_type = CliCommandType(operations_tmpl='azext_baremetalinfrastructure.custom#{}')
         super(AzureBareMetalInstanceCommandsLoader, self).__init__(cli_ctx=cli_ctx,
-                                                      custom_command_type=custom_type,
-                                                      min_profile='2017-03-10-profile')
+                                                      custom_command_type=custom_type)
 
     def load_command_table(self, args):
         from azext_baremetalinfrastructure.commands import load_command_table
