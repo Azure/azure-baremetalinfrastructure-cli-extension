@@ -4,9 +4,9 @@
 # --------------------------------------------------------------------------------------------
 
 def _azurebaremetal_instance_client_factory(cli_ctx, *_):
-    from azext_baremetalinfrastructure.modules_sdk import BareMetalInfrastructurelManagementClient
+    from azext_baremetalinfrastructure.modules_sdk import BareMetalInfrastructureClient
     from azure.cli.core.commands.client_factory import get_mgmt_service_client
-    return get_mgmt_service_client(cli_ctx, BareMetalManagementClient)
+    return get_mgmt_service_client(cli_ctx, BareMetalInfrastructureClient)
 
 def cf_azurebaremetalinstance_groups(cli_ctx, *_):
-    return _azurebaremetal_instance_client_factory(cli_ctx).baremetal_instances
+    return _azurebaremetal_instance_client_factory(cli_ctx).azure_bare_metal_instances

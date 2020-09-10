@@ -10,11 +10,9 @@
 # --------------------------------------------------------------------------
 
 from .azure_bare_metal_instances_operations import AzureBareMetalInstancesOperations
-from .bare_metal_instances_operations import BareMetalInstancesOperations
 from .operations import Operations
 
 __all__ = [
     'AzureBareMetalInstancesOperations',
-    'BareMetalInstancesOperations',
     'Operations',
 ]
