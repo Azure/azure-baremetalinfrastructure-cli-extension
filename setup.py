@@ -32,9 +32,9 @@ with open('HISTORY.rst', 'r', encoding='utf-8') as f:
     HISTORY = f.read()
 
 setup(
-    name='azure-baremetal',
+    name='baremetal',
     version=VERSION,
-    description='Additional commands for working with Azure Bare Metal instances.',
+    description='Additional commands for working with BareMetal instances.',
     long_description=README + '\n\n' + HISTORY,
     license='MIT',
     author='Microsoft Corporation',

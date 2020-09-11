@@ -9,27 +9,27 @@ from knack.help_files import helps
 
 helps['baremetalinstance'] = """
     type: group
-    short-summary: (PREVIEW) Manage Bare Metal Instances.
+    short-summary: (PREVIEW) Manage BareMetal Instances.
     """
 
 helps['baremetalinstance show'] = """
     type: command
-    short-summary: Get the details of a Bare Metal Instance.
+    short-summary: Get the details of a BareMetal Instance.
     """
 
 helps['baremetalinstance list'] = """
     type: command
-    short-summary: List Bare Metal Instances.
+    short-summary: List BareMetal Instances.
 """
 
 helps['baremetalinstance restart'] = """
     type: command
-    short-summary: Restart a Bare Metal Instance.
+    short-summary: Restart a BareMetal Instance.
 """
 
 helps['baremetalinstance start'] = """
     type: command
-    short-summary: Start a Bare Metal Instance.
+    short-summary: Start a BareMetal Instance.
 """
 
 helps['baremetalinstance shutdown'] = """
@@ -39,10 +39,10 @@ helps['baremetalinstance shutdown'] = """
 
 helps['baremetalinstance update'] = """
     type: command
-    short-summary: Update the tags field of a Bare Metal Instance.
+    short-summary: Update the tags field of a BareMetal Instance.
 """
 
 helps['baremetalinstance delete'] = """
     type: command
-    short-summary: Delete a Bare Metal Instance.
+    short-summary: Delete a BareMetal Instance.
 """

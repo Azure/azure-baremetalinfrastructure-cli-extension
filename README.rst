@@ -1,5 +1,5 @@
-Microsoft Azure CLI 'azurebaremetal' Command Module for BareMetalInfrastructure
+Microsoft Azure CLI 'baremetalinstance' Command Module for BareMetalInfrastructure
 ==============================================================================
 
-This package is for the 'azurebaremetal' module.
-i.e. 'az azurebaremetal'
+This package is for the 'baremetal' module.
+i.e. 'az baremetalinstance'
