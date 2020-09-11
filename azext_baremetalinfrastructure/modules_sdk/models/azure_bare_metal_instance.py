@@ -9,26 +9,30 @@
 # regenerated.
 # --------------------------------------------------------------------------
 
-from .resource import Resource
+from .tracked_resource import TrackedResource
 
 
-class AzureBareMetalInstance(Resource):
+class AzureBareMetalInstance(TrackedResource):
     """AzureBareMetal instance info on Azure (ARM properties and AzureBareMetal
     properties).
 
     Variables are only populated by the server, and will be ignored when
     sending a request.
 
-    :ivar id: Resource ID
+    All required parameters must be populated in order to send to Azure.
+
+    :ivar id: Fully qualified resource Id for the resource. Ex -
+     /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
     :vartype id: str
-    :ivar name: Resource name
+    :ivar name: The name of the resource
     :vartype name: str
-    :ivar type: Resource type
+    :ivar type: The type of the resource. Ex-
+     Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
     :vartype type: str
-    :param location: Resource location
+    :param tags: Resource tags.
+    :type tags: dict[str, str]
+    :param location: Required. The geo-location where the resource lives
     :type location: str
-    :ivar tags: Resource tags
-    :vartype tags: dict[str, str]
     :param hardware_profile: Specifies the hardware settings for the
      AzureBareMetal instance.
     :type hardware_profile:
@@ -69,7 +73,7 @@ class AzureBareMetalInstance(Resource):
         'id': {'readonly': True},
         'name': {'readonly': True},
         'type': {'readonly': True},
-        'tags': {'readonly': True},
+        'location': {'required': True},
         'azure_bare_metal_instance_id': {'readonly': True},
         'power_state': {'readonly': True},
         'proximity_placement_group': {'readonly': True},
@@ -81,8 +85,8 @@ class AzureBareMetalInstance(Resource):
         'id': {'key': 'id', 'type': 'str'},
         'name': {'key': 'name', 'type': 'str'},
         'type': {'key': 'type', 'type': 'str'},
-        'location': {'key': 'location', 'type': 'str'},
         'tags': {'key': 'tags', 'type': '{str}'},
+        'location': {'key': 'location', 'type': 'str'},
         'hardware_profile': {'key': 'properties.hardwareProfile', 'type': 'HardwareProfile'},
         'storage_profile': {'key': 'properties.storageProfile', 'type': 'StorageProfile'},
         'os_profile': {'key': 'properties.osProfile', 'type': 'OSProfile'},

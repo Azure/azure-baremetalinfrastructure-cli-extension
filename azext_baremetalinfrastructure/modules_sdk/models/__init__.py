@@ -10,7 +10,6 @@
 # --------------------------------------------------------------------------
 
 try:
-    from .resource_py3 import Resource
     from .hardware_profile_py3 import HardwareProfile
     from .disk_py3 import Disk
     from .storage_profile_py3 import StorageProfile
@@ -24,8 +23,11 @@ try:
     from .error_definition_py3 import ErrorDefinition
     from .error_response_py3 import ErrorResponse, ErrorResponseException
     from .tags_py3 import Tags
+    from .proxy_resource_py3 import ProxyResource
+    from .azure_entity_resource_py3 import AzureEntityResource
+    from .resource_py3 import Resource
+    from .tracked_resource_py3 import TrackedResource
 except (SyntaxError, ImportError):
-    from .resource import Resource
     from .hardware_profile import HardwareProfile
     from .disk import Disk
     from .storage_profile import StorageProfile
@@ -39,6 +41,10 @@ except (SyntaxError, ImportError):
     from .error_definition import ErrorDefinition
     from .error_response import ErrorResponse, ErrorResponseException
     from .tags import Tags
+    from .proxy_resource import ProxyResource
+    from .azure_entity_resource import AzureEntityResource
+    from .resource import Resource
+    from .tracked_resource import TrackedResource
 from .azure_bare_metal_instance_paged import AzureBareMetalInstancePaged
 from .operation_paged import OperationPaged
 from .bare_metal_infrastructure_client_enums import (
@@ -49,7 +55,6 @@ from .bare_metal_infrastructure_client_enums import (
 )
 
 __all__ = [
-    'Resource',
     'HardwareProfile',
     'Disk',
     'StorageProfile',
@@ -63,6 +68,10 @@ __all__ = [
     'ErrorDefinition',
     'ErrorResponse', 'ErrorResponseException',
     'Tags',
+    'ProxyResource',
+    'AzureEntityResource',
+    'Resource',
+    'TrackedResource',
     'AzureBareMetalInstancePaged',
     'OperationPaged',
     'AzureBareMetalHardwareTypeNamesEnum',
