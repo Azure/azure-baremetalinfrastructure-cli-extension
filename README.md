@@ -10,58 +10,58 @@ az extension add --source $LATEST_RELEASE
 
 # Usage
 
-To list all AzureBareMetal instances for the subscription:
+To list all BareMetal instances for the subscription:
 
 ```
 az baremetalinstance list
 ```
 
-To show details about a specific Azure Bare Metal instance:
+To show details about a specific BareMetal instance:
 
 ```
-az azurebaremetalinstance show --resource-group $RESOURCE_GROUP --instance-name $ABM_INSTANCE_NAME
+az baremetalinstance show --resource-group $RESOURCE_GROUP --instance-name $BM_INSTANCE_NAME
 ```
 
-To add a key-value pair to the Tags field of a specific Azure Bare Metal instance:
+To add a key-value pair to the Tags field of a specific BareMetal instance:
 
 ```
-az baremetalinstance update --resource-group $RESOURCE_GROUP --instance-name $ABM_INSTANCE_NAME --set tags.newKey=value
+az baremetalinstance update --resource-group $RESOURCE_GROUP --instance-name $BM_INSTANCE_NAME --set tags.newKey=value
 ```
 
-To update a key-value pair in the Tags field of a specific Azure Bare Metal instance:
+To update a key-value pair in the Tags field of a specific BareMetal instance:
 
 ```
-az baremetalinstance update --resource-group $RESOURCE_GROUP --instance-name $ABM_INSTANCE_NAME --set tags.key=updatedValue
+az baremetalinstance update --resource-group $RESOURCE_GROUP --instance-name $BM_INSTANCE_NAME --set tags.key=updatedValue
 ```
 
-To delete a key-value pair from the Tags field of a specific Azure Bare Metal instance:
+To delete a key-value pair from the Tags field of a specific BareMetal instance:
 
 ```
-az baremetalinstance update --resource-group $RESOURCE_GROUP --instance-name $ABM_INSTANCE_NAME --remove tags.key
+az baremetalinstance update --resource-group $RESOURCE_GROUP --instance-name $BM_INSTANCE_NAME --remove tags.key
 ```
 
-To delete all key-value pairs in the Tags field of a specific Azure Bare Metal instance:
+To delete all key-value pairs in the Tags field of a specific BareMetal instance:
 
 ```
-az baremetalinstance update --resource-group $RESOURCE_GROUP --instance-name $ABM_INSTANCE_NAME --set tags={}
+az baremetalinstance update --resource-group $RESOURCE_GROUP --instance-name $BM_INSTANCE_NAME --set tags={}
 ```
 
-To delete a Azure Bare Metal instance:
+To delete a BareMetal instance:
 
 ```
-az baremetalinstance delete --resource-group $RESOURCE_GROUP --instance-name $ABM_INSTANCE_NAME
+az baremetalinstance delete --resource-group $RESOURCE_GROUP --instance-name $BM_INSTANCE_NAME
 ```
 
-To start a specific Azure Bare Metal instance:
+To start a specific BareMetal instance:
 
 ```
-az baremetalinstance start --resource-group $RESOURCE_GROUP --instance-name $ABM_INSTANCE_NAME
+az baremetalinstance start --resource-group $RESOURCE_GROUP --instance-name $BM_INSTANCE_NAME
 ```
 
-To shutdown a specific Azure Bare Metal instance:
+To shutdown a specific BareMetal instance:
 
 ```
-az baremetalinstance shutdown --resource-group $RESOURCE_GROUP --instance-name $ABM_INSTANCE_NAME
+az baremetalinstance shutdown --resource-group $RESOURCE_GROUP --instance-name $BM_INSTANCE_NAME
 ```
 
 # Contributing
