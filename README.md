@@ -58,6 +58,12 @@ To start a specific BareMetal instance:
 az baremetalinstance start --resource-group $RESOURCE_GROUP --instance-name $BM_INSTANCE_NAME
 ```
 
+To restart a specific BareMetal instance:
+
+```
+az baremetalinstance restart --resource-group $RESOURCE_GROUP --instance-name $BM_INSTANCE_NAME
+```
+
 To shutdown a specific BareMetal instance:
 
 ```
