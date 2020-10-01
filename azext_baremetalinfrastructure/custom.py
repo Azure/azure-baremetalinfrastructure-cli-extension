@@ -22,7 +22,7 @@ def restart_baremetalinstance(client, resource_group_name, instance_name):
     # We need to add a custom header to force the API call to add the Content-Type.
     custom_header = {}
     custom_header['Content-Type'] = 'application/json; charset=utf-8'
-    return client.begin_restart(resource_group_name, instance_name)
+    return client.begin_restart(resource_group_name, instance_name, headers=custom_header)
 
 def start_baremetalinstance(client, resource_group_name, instance_name):
     # The start baremetalinstance REST API is a POST with no body.
@@ -31,7 +31,7 @@ def start_baremetalinstance(client, resource_group_name, instance_name):
     # We need to add a custom header to force the API call to add the Content-Type.
     custom_header = {}
     custom_header['Content-Type'] = 'application/json; charset=utf-8'
-    return client.begin_start(resource_group_name, instance_name, custom_header)
+    return client.begin_start(resource_group_name, instance_name, headers=custom_header)
 
 def shutdown_baremetalinstance(client, resource_group_name, instance_name):
     # The shutdown baremetalinstance REST API is a POST with no body.
@@ -40,7 +40,7 @@ def shutdown_baremetalinstance(client, resource_group_name, instance_name):
     # We need to add a custom header to force the API call to add the Content-Type.
     custom_header = {}
     custom_header['Content-Type'] = 'application/json; charset=utf-8'
-    return client.begin_shutdown(resource_group_name, instance_name, custom_header)
+    return client.begin_shutdown(resource_group_name, instance_name, headers=custom_header)
 
 def update_baremetalinstance(client, resource_group_name, instance_name, **kwargs):
     return client.update(resource_group_name, instance_name, kwargs['parameters'].tags)
