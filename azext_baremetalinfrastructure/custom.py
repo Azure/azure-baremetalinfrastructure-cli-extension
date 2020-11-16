@@ -46,4 +46,4 @@ def update_baremetalinstance(client, resource_group_name, instance_name, **kwarg
     return client.update(resource_group_name, instance_name, kwargs['parameters'].tags)
 
 def delete_baremetalinstance(client, resource_group_name, instance_name):
-    return client.delete(resource_group_name, instance_name)
+    return client.begin_delete(resource_group_name, instance_name)
