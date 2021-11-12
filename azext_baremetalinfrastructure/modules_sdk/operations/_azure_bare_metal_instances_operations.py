@@ -382,7 +382,7 @@ class AzureBareMetalInstancesOperations(object):
             401: ClientAuthenticationError, 404: ResourceNotFoundError, 409: ResourceExistsError
         }
         error_map.update(kwargs.pop('error_map', {}))
-        api_version = "2020-08-06-preview"
+        api_version = "2021-08-09"
         accept = "application/json"
 
         def prepare_request(next_link=None):
@@ -453,7 +453,7 @@ class AzureBareMetalInstancesOperations(object):
             401: ClientAuthenticationError, 404: ResourceNotFoundError, 409: ResourceExistsError
         }
         error_map.update(kwargs.pop('error_map', {}))
-        api_version = "2020-08-06-preview"
+        api_version = "2021-08-09"
         accept = "application/json"
 
         def prepare_request(next_link=None):
@@ -531,7 +531,7 @@ class AzureBareMetalInstancesOperations(object):
             401: ClientAuthenticationError, 404: ResourceNotFoundError, 409: ResourceExistsError
         }
         error_map.update(kwargs.pop('error_map', {}))
-        api_version = "2020-08-06-preview"
+        api_version = "2021-08-09"
         accept = "application/json"
 
         # Construct URL
@@ -705,7 +705,7 @@ class AzureBareMetalInstancesOperations(object):
             401: ClientAuthenticationError, 404: ResourceNotFoundError, 409: ResourceExistsError
         }
         error_map.update(kwargs.pop('error_map', {}))
-        api_version = "2020-08-06-preview"
+        api_version =  "2021-08-09"
         content_type = kwargs.pop("content_type", "application/json")
         accept = "application/json"
 
