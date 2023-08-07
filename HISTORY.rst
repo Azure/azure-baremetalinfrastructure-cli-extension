@@ -8,3 +8,7 @@ Release History
 1.0.0 (2021-11-11)
 ++++++++++++++++++
 - point list/update operations to new GA API version
+
+2.0.0 (2023-08-04)
+++++++++++++++++++
+- Add force restart operation
