@@ -5,16 +5,13 @@
 
 # pylint: disable=no-self-use,too-many-lines
 
-
 def show_baremetalinstance(client, resource_group_name, instance_name):
     return client.get(resource_group_name, instance_name)
-
 
 def list_baremetalinstance(client, resource_group_name=None):
     if resource_group_name is None:
         return client.list_by_subscription()
     return client.list(resource_group_name)
-
 
 def restart_baremetalinstance(client, resource_group_name, instance_name, force=False):
     # The restart baremetalinstance REST API is a POST with a body.
@@ -25,7 +22,6 @@ def restart_baremetalinstance(client, resource_group_name, instance_name, force=
     force_status = True if force else False
     return client.begin_restart(resource_group_name, instance_name, force_status, headers=custom_header)
 
-
 def start_baremetalinstance(client, resource_group_name, instance_name):
     # The start baremetalinstance REST API is a POST with no body.
     # The HaaS RP API requires the Content-Type to be set.
@@ -34,7 +30,6 @@ def start_baremetalinstance(client, resource_group_name, instance_name):
     custom_header = {}
     custom_header['Content-Type'] = 'application/json; charset=utf-8'
     return client.begin_start(resource_group_name, instance_name, headers=custom_header)
-
 
 def shutdown_baremetalinstance(client, resource_group_name, instance_name):
     # The shutdown baremetalinstance REST API is a POST with no body.
@@ -45,10 +40,8 @@ def shutdown_baremetalinstance(client, resource_group_name, instance_name):
     custom_header['Content-Type'] = 'application/json; charset=utf-8'
     return client.begin_shutdown(resource_group_name, instance_name, headers=custom_header)
 
-
 def update_baremetalinstance(client, resource_group_name, instance_name, **kwargs):
     return client.update(resource_group_name, instance_name, kwargs['parameters'].tags)
-
 
 def delete_baremetalinstance(client, resource_group_name, instance_name):
     return client.begin_delete(resource_group_name, instance_name)

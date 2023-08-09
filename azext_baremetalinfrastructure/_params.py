@@ -8,9 +8,7 @@ from azure.cli.core.commands.parameters import (
     get_three_state_flag
 )
 
-
 def load_arguments(self, _):
-
     with self.argument_context('baremetalinstance') as c:
         c.argument('resource_group_name', arg_type=resource_group_name_type)
         c.argument('instance_name', options_list=[
