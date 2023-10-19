@@ -5,7 +5,7 @@
 To install this extension just use the CLI extension add command:
 
 ```
-az extension add --source $LATEST_RELEASE
+az extension add --name baremetal-infrastructure
 ```
 
 # Usage

@@ -19,8 +19,8 @@ def restart_baremetalinstance(client, resource_group_name, instance_name, force=
     # Swagger does not add the Content-Type in the header if there is no body.
     # We need to add a custom header to force the API call to add the Content-Type.
     custom_header = {}
-    force_status = True if force else False
-    return client.begin_restart(resource_group_name, instance_name, force_status, headers=custom_header)
+    force_parameter = { "forceState": "active" if force else "inactive" }
+    return client.begin_restart(resource_group_name, instance_name, force_parameter, headers=custom_header)
 
 def start_baremetalinstance(client, resource_group_name, instance_name):
     # The start baremetalinstance REST API is a POST with no body.
