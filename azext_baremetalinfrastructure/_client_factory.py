@@ -9,6 +9,4 @@ def _baremetal_instance_client_factory(cli_ctx, subscription_id=None):
     return get_mgmt_service_client(cli_ctx=cli_ctx, client_or_resource_type=BareMetalInfrastructureClient, subscription_id=subscription_id, base_url_bound=False, credential= None)
 
 def cf_baremetalinstance_groups(cli_ctx, *_):
-    from azure.cli.core.commands.client_factory import get_subscription_id
-    subscription_id=get_subscription_id(cli_ctx)
-    return _baremetal_instance_client_factory(cli_ctx=cli_ctx, subscription_id=subscription_id).azure_bare_metal_instances
+    return _baremetal_instance_client_factory(cli_ctx=cli_ctx).azure_bare_metal_instances
