@@ -5,7 +5,7 @@
 To install this extension just use the CLI extension add command:
 
 ```
-az extension add --source $LATEST_RELEASE
+az extension add --name baremetal-infrastructure
 ```
 
 # Usage
@@ -62,6 +62,12 @@ To restart a specific BareMetal instance:
 
 ```
 az baremetalinstance restart --resource-group $RESOURCE_GROUP --instance-name $BM_INSTANCE_NAME
+```
+
+To force restart a specific BareMetal instance:
+
+```
+az baremetalinstance restart --resource-group $RESOURCE_GROUP --instance-name $BM_INSTANCE_NAME --force
 ```
 
 To shutdown a specific BareMetal instance:
