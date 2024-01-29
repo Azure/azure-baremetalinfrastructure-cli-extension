@@ -12,3 +12,7 @@ Release History
 2.0.0 (2023-08-04)
 ++++++++++++++++++
 - Add force restart operation
+
+2.0.1 (2024-01-26)
+++++++++++++++++++
+- Patch extension resolve the Python 3.11 missing attribute "SensitiveHeaderCleanupPolicy" error
