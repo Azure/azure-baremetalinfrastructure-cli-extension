@@ -8,6 +8,12 @@ To install this extension just use the CLI extension add command:
 az extension add --name baremetal-infrastructure
 ```
 
+To install a specific version of the wheel, use the source option as shown in the example command below:
+
+```
+az extension add --source baremetal_infrastructure-2.0.0-py2.py3-none-any.whl
+```
+
 # Usage
 
 To list all BareMetal instances for the subscription:
